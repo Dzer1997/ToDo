@@ -19,8 +19,8 @@ public class Task {
     @Size(max = 255)
     private String description;
     @FutureOrPresent
-    private LocalDate deadline;
-    private Boolean status = false;
+    private LocalDate  deadline;
+    private String status;
     @ManyToOne
     @NotNull
     @JsonBackReference
@@ -29,7 +29,7 @@ public class Task {
     public Task() {
     }
 
-    public Task(long id, String title, String description, LocalDate deadline, Boolean status, Category category) {
+    public Task(long id, String title, String description, LocalDate  deadline, String status, Category category) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -62,19 +62,19 @@ public class Task {
         this.description = description;
     }
 
-    public LocalDate getDeadline() {
+    public LocalDate  getDeadline() {
         return deadline;
     }
 
-    public void setDeadline(LocalDate deadline) {
+    public void setDeadline(LocalDate  deadline) {
         this.deadline = deadline;
     }
 
-    public Boolean getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(Boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 

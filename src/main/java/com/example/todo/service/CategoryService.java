@@ -1,4 +1,4 @@
-package com.example.todo.UnitTest;
+package com.example.todo.service;
 
 import com.example.todo.model.Category;
 import com.example.todo.repository.CategoryRepository;

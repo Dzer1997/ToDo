@@ -134,7 +134,7 @@
                 <version>${pitest.version}</version>
                 <configuration>
                     <targetClasses>
-                        <param>com.example.todo.UnitTest.*</param>
+                        <param>com.example.todo.service.*</param>
                     </targetClasses>
                     <targetTests>
                         <param>com.example.todo.*Test</param>

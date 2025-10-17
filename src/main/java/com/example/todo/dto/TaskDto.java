@@ -13,10 +13,10 @@ public class TaskDto {
     private String title;
     private String description;
 
-    @FutureOrPresent
-    private LocalDate deadline;
 
-    private Boolean status = false;
+    private String deadline;
+
+    private String status;
 
     @NotNull
     private Long categoryId; // kun id, ikke hele Category
@@ -24,7 +24,7 @@ public class TaskDto {
     public TaskDto() {
     }
 
-    public TaskDto(Long id, String title, String description, LocalDate deadline, Boolean status, Long categoryId) {
+    public TaskDto(Long id, String title, String description, String  deadline, String status, Long categoryId) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -57,19 +57,19 @@ public class TaskDto {
         this.description = description;
     }
 
-    public LocalDate getDeadline() {
+    public String  getDeadline() {
         return deadline;
     }
 
-    public void setDeadline(LocalDate deadline) {
+    public void setDeadline(String  deadline) {
         this.deadline = deadline;
     }
 
-    public Boolean getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(Boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 

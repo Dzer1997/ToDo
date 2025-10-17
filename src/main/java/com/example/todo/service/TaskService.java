@@ -1,4 +1,4 @@
-package com.example.todo.UnitTest;
+package com.example.todo.service;
 import com.example.todo.model.Task;
 import com.example.todo.repository.TaskRepository;
 import org.springframework.stereotype.Service;
@@ -42,4 +42,8 @@ public class TaskService {
         TaskRepo.deleteById(id);
     }
 
+    public Task getTaskById(Long id) {
+        return TaskRepo.findById(id)
+                .orElseThrow(() -> new RuntimeException("Task med id " + id + " findes ikke"));
+    }
 }

@@ -1,12 +1,13 @@
-package com.example.todo.IntegrationTest;
+package com.example.todo.controller;
 
 import com.example.todo.dto.CategoryDto;
 import com.example.todo.model.Category;
-import com.example.todo.UnitTest.CategoryService;
+import com.example.todo.service.CategoryService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/category")
 public class CategoryController {
